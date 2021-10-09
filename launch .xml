@@ -1,6 +1,6 @@
 <launch>
-    <node pkg="beginner_tutorials" type="service_server.py" name="server"/>
-    <node pkg="beginner_tutorials" type="service_client1.py" name="client_1" />
-    <node pkg="beginner_tutorials" type="service_client2.py" name="client_2" output="screen" />
+    <node pkg="beginner_tutorials" type="Addition.py" name="Add"/>
+    <node pkg="beginner_tutorials" type="Multiply.py" name="Mul" />
+    <node pkg="beginner_tutorials" type="Answer.py" name="Ans" output="screen" />
 </launch>
     
