@@ -3,12 +3,12 @@ import rospy
 from beginner_tutorials.srv import add, addResponse
 from beginner_tutorials.msg import multiply
 
-def client_1(x,y):
-    rospy.init_node("client_1",anonymous=True)
-    rospy.wait_for_service("server")
+def Mul(x,y):
+    rospy.init_node("Mul",anonymous=True)
+    rospy.wait_for_service("Add")
     rate = rospy.Rate(1) 
     while not rospy.is_shutdown():
-        add_two_ints = rospy.ServiceProxy("server",add)
+        add_two_ints = rospy.ServiceProxy("Add",add)
         response = add_two_ints(x,y)
         rospy.loginfo("Sum of %d and %d is %d.",x,y,response.result)
 
@@ -24,4 +24,4 @@ def client_1(x,y):
     
 
 if __name__ == '__main__':
-    client_1(2,3)
+    Mul(2,3)
