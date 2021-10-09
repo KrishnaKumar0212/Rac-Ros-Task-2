@@ -4,7 +4,7 @@ from std_msgs.msg import String
 from beginner_tutorials.msg import multiply
 
 def callback(data):
-    rospy.loginfo("Multiplication of %d with the sum %d is %d.",data.c,data.z,data.d)
+    rospy.loginfo("Multiplication of %d with the sum %d is %d.",data.a,data.b,data.c)
     
 def Ans():
 
