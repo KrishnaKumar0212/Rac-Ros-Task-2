@@ -4,14 +4,14 @@ from beginner_tutorials.srv import add , addResponse
 
 
 def callback(request):
-    return addResponse(request.a + request.b)
+    return addResponse(request.d + request.e)
    
 
 def addition():
-    rospy.init_node("server")
-    service = rospy.Service("server",add,callback)
+    rospy.init_node("Add")
+    service = rospy.Service("Add",add,callback)
     rospy.spin()
 
 
 if __name__ == '__main__':
-    addition()
+    Add()
