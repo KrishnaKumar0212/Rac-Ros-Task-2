@@ -14,9 +14,9 @@ def Mul(x,y):
 
         pub = rospy.Publisher('chatter', multiply, queue_size=10)
         msg = multiply()
-        msg.z = response.result
-        msg.c = 4
-        msg.d = msg.z * msg.c
+        msg.c = response.result
+        msg.a = 4
+        msg.b = msg.c * msg.b
     
     
         pub.publish(msg)
